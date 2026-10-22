@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | JULVIN CLOTHING</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">WELCOME TO JULVIN CLOTHING</div>
+  <header class="header">
+    <a class="logo" href="index.html">JULVIN <span>CLOTHING</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="order.html">Order</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="form-layout">
+    <section class="form-art">
+      <p class="eyebrow">WELCOME BACK</p>
+      <h1>Your style.<br><em>Your story.</em></h1>
+      <p>Discover your next favourite look with Julvin Clothing.</p>
+    </section>
+
+    <section class="form-panel">
+      <p class="eyebrow">CUSTOMER ACCOUNT</p>
+      <h2>Sign in</h2>
+      <p class="muted">Enter your details below.</p>
+
+      <form id="login-form">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email"
+               autocomplete="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password"
+               minlength="8" autocomplete="current-password" required>
+
+        <button class="button" type="submit">SIGN IN →</button>
+      </form>
+
+      <p class="form-note">
+        Need help? <a href="contact.html">Contact our team</a>.
+      </p>
+      <p class="small-note">
+        Demo form only. A secure backend is needed to authenticate customers.
+      </p>
+    </section>
+  </main>
+
+  <footer class="simple-footer">
+    <a href="index.html">← Back to Julvin Clothing</a>
+  </footer>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("This is a demo login. Connect a secure authentication backend to enable real customer accounts.");
+    });
+  </script>
+</body>
+</html>

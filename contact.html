@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | JULVIN CLOTHING</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">WE'RE HERE TO HELP YOU</div>
+  <header class="header">
+    <a class="logo" href="index.html">JULVIN <span>CLOTHING</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="order.html">Order</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="contact-layout">
+    <section class="contact-intro">
+      <p class="eyebrow">CUSTOMER CARE</p>
+      <h1>Let's talk<br><em>style.</em></h1>
+      <p>
+        Have questions about our Ghana crack boubou dresses,
+        two-piece outfits, sizing or delivery? Send us a message.
+      </p>
+
+      <div class="contact-detail">
+        <strong>Product enquiries</strong>
+        <span>Ask about fabrics, colours, sizes and availability.</span>
+      </div>
+      <div class="contact-detail">
+        <strong>Orders and delivery</strong>
+        <span>Contact us about your order and delivery arrangements.</span>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <h2>Send a message</h2>
+      <p class="muted">Fill in your details below.</p>
+
+      <form id="contact-form">
+        <label for="name">Full name</label>
+        <input id="name" name="name" autocomplete="name" required>
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email"
+               autocomplete="email" required>
+
+        <label for="subject">What can we help you with?</label>
+        <select id="subject" name="subject" required>
+          <option value="">Select an enquiry</option>
+          <option>Product enquiry</option>
+          <option>Size and fitting</option>
+          <option>Delivery</option>
+          <option>Custom outfit</option>
+          <option>Other</option>
+        </select>
+
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="button" type="submit">SEND MESSAGE →</button>
+      </form>
+
+      <p class="small-note">
+        Demo form. Connect an email service or backend to receive messages.
+      </p>
+    </section>
+  </main>
+
+  <footer class="simple-footer">
+    <a href="index.html">← Back to Julvin Clothing</a>
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const data = new FormData(event.currentTarget);
+      const subject = "Julvin Clothing enquiry: " + data.get("subject");
+      const body =
+        "Name: " + data.get("name") + "\n" +
+        "Email: " + data.get("email") + "\n\n" +
+        data.get("message");
+
+      // Replace this address with your real business email.
+      window.location.href =
+        "mailto:YOUR-EMAIL@example.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
